@@ -547,7 +547,7 @@ function getIntegerPartNumber(number) {
  * 0.1, 0.2, 0.3 => 0.6
  */
 function getSumOfNumbers(x1, x2, x3) {
-  return x1 + x2 + x3;
+  return Math.parseFloat(x1 + x2 + x3);
 }
 
 /**
@@ -579,7 +579,10 @@ function getMaxNumber(firstNumber, secondNumber) {
  * -1, 1 => -1 | 0 | 1
  */
 function getRandomInteger(min, max) {
-  return Math.random() * (max - min) + min;
+  return (
+    Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1)) +
+    Math.ceil(min)
+  );
 }
 
 /**
@@ -610,7 +613,7 @@ function getHypotenuse(a, b) {
  * 15 => 8
  */
 function getCountOfOddNumbers(number) {
-  let count = 0;
+  let count = 1;
   for (let i = 0; i < number; i += 1) {
     if (i % 2 !== 0) {
       count += 1;
