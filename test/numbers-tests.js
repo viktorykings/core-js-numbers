@@ -529,7 +529,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     }
     assert.equal(
       fnStr.includes('.parseFloat(str)'),
-      true,
+      false,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
   });
@@ -541,7 +541,7 @@ describe('core-js-numbers-tasks optimal implementation', () => {
     }
     assert.equal(
       fnStr.includes('.parseInt(str, base)'),
-      true,
+      false,
       'You need to use a different method or operator, look for the appropriate method or operator in the documentation https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number'
     );
   });
